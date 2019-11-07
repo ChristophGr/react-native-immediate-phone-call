@@ -1,16 +1,15 @@
 package com.github.wumke.RNImmediatePhoneCall;
 
-import android.support.annotation.NonNull;
-
-import com.facebook.react.ReactPackage;
-import com.facebook.react.bridge.JavaScriptModule;
-import com.facebook.react.bridge.NativeModule;
-import com.facebook.react.bridge.ReactApplicationContext;
-import com.facebook.react.uimanager.ViewManager;
-
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import com.facebook.react.ReactPackage;
+import com.facebook.react.bridge.NativeModule;
+import com.facebook.react.bridge.ReactApplicationContext;
+import com.facebook.react.uimanager.ViewManager;
+import com.facebook.react.bridge.JavaScriptModule;
 
 public class RNImmediatePhoneCallPackage implements ReactPackage {
 
@@ -27,6 +26,7 @@ public class RNImmediatePhoneCallPackage implements ReactPackage {
     // override removed to be compatible with rn0.47+
     //@Override
     public List<Class<? extends JavaScriptModule>> createJSModules() {
+
         return Collections.emptyList();
     }
 
@@ -34,11 +34,6 @@ public class RNImmediatePhoneCallPackage implements ReactPackage {
     public List<ViewManager> createViewManagers(
             ReactApplicationContext reactContext) {
         return Collections.emptyList();
-    }
-	
-	public static void onRequestPermissionsResult(int requestCode, @NonNull String permissions[],
-                                                  @NonNull int[] grantResults) {
-        RNImmediatePhoneCallModule.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
 }
